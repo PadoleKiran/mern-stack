@@ -50,3 +50,7 @@ let bigNum = 1235467894565236896226563232n; // BigInt for large integers
 
 let empty = null; // Represents the intentional absence of any value
 let notDefined; // Variable declared but not initialized, value is undefined
+
+console.log(10+null); // Output: 10 (null is treated as 0 in arithmetic operations)
+console.log(10 + undefined); // Output: NaN (undefined is not a number, so the result is NaN)
+// Nan (Not a Number) is a special value that represents an undefined or unrepresentable value in arithmetic operations

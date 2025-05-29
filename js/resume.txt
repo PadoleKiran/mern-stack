@@ -1,0 +1,147 @@
+\documentclass{resume}
+\usepackage[left=0.7in,top=0.4in,right=0.7in,bottom=0.4in]{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\renewcommand{\baselinestretch}{0.95}
+
+\name{Kiran Jagannath Padole}
+\address{+91-9850780471 ⋄ kiranpadole2026@gmail.com ⋄ Pune, India \\
+\href{https://github.com/PadoleKiran}{GitHub} ⋄ \href{https://www.linkedin.com/in/kiran-padole-b3231b368/}{LinkedIn}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%   PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional Summary}
+Motivated and detail-oriented Computer Science postgraduate (M.Sc.) with a strong foundation in backend development, full-stack application design, and DevOps practices. Skilled in Spring Boot, RESTful APIs, AWS cloud services, and modern deployment pipelines. Proven ability to lead academic projects, implement real-world solutions, and continuously upgrade technical proficiency.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+  \begin{rSubsection}{Modern College, Shivajinagar, Pune}{2022 – 2024}{M.Sc. Computer Science — 75\%}{}
+  \end{rSubsection}
+  \begin{rSubsection}{Modern College, Ganeshkhind, Pune}{2019 – 2022}{Bachelor of Computer Science — 83.77\%}{}
+  \end{rSubsection}
+  \begin{rSubsection}{D. Y. Patil Junior College, Akurdi, Pune}{2018 – 2019}{HSC (12\textsuperscript{th}) – Science Stream}{}
+  \end{rSubsection}
+  \begin{rSubsection}{Prerana Madhyamik Vidyalaya, Thergaon, Pune}{2016 – 2017}{SSC (10\textsuperscript{th}) — 69\%}{}
+  \end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experience}
+  \begin{rSubsection}{DevOps Intern, Ecogreensoft Technology Pvt Ltd}{Jan 2024 – Mar 2024}{Pune, India}{}
+    \item Supported development teams by integrating CI/CD pipelines with Jenkins and Bitbucket.
+    \item Assisted in performance tuning and reliability monitoring using AWS CloudWatch.
+    \item Collaborated with backend teams to automate testing and deployments.
+    \item Managed AWS infrastructure including EC2, RDS, Lambda, ECS, VPC, Route 53, and SQS.
+  \end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+\textbf{Frameworks \& Libraries:} \\
+Spring Boot, Spring, Hibernate, REST API \\
+
+\textbf{Programming Languages:} \\
+Java, Python, SQL, HTML, CSS \\
+
+\textbf{Databases:} \\
+MySQL, MongoDB \\
+
+\textbf{Web Tools:} \\
+Docker, Git, Jenkins, Postman, Maven, JIRA, Bitbucket \\
+
+\textbf{Cloud \& DevOps:} \\
+AWS (EC2, S3, RDS, VPC, Lambda, ECS, EKS, Route 53, CloudWatch, SQS) \\
+
+\textbf{Others:} \\
+IntelliJ IDEA, Microsoft Excel, YAML, Linux, API Integration, Design Patterns
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Projects}
+
+  \begin{rSubsection}{E-Commerce Application}{Java, Spring Boot, REST API, MySQL, Design Patterns}{}{}
+    \item Developed a full-stack E-Commerce application with secure customer and admin roles.
+    \item Implemented RESTful APIs for user registration, product browsing, cart, and order operations.
+    \item Applied JWT-based authentication and MySQL for relational data management.
+    \item Performed API testing with Postman ensuring reliability and integration.
+  \end{rSubsection}
+
+  \begin{rSubsection}{Attendance System with Face Recognition}{Python, MongoDB, OpenCV, LBPH, tkinter}{}{}
+    \item Developed a face recognition attendance app with GUI and real-time alerts.
+    \item Integrated MongoDB for storing facial encodings and attendance records.
+    \item Used LBPH algorithm and OpenCV for real-time recognition and image processing.
+    \item Enabled automatic email alerts via SMTP on unauthorized entries.
+  \end{rSubsection}
+
+  \begin{rSubsection}{Helping Hand for Handicapped People}{Python, MongoDB, TTS/STT}{}{}
+    \item Built an assistive tool featuring text-to-speech, speech-to-text, text-to-sign conversion.
+    \item Integrated object detection using a pre-trained deep learning model.
+    \item Won 2\textsuperscript{nd} prize at Avishkar Tech Competition for innovation.
+  \end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Certifications}
+  \item Python Course – University of Michigan
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   ACHIEVEMENTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Achievements}
+  \item Won 2\textsuperscript{nd} Prize at Avishkar Tech Competition.
+  \item Represented college at G20 \& S20 Tech Events as a Student Delegate.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   HOBBIES & INTERESTS
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Hobbies \& Interests}
+Nature photography, astronomy, creative writing, history, exploring cultures, and football.
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   PERSONAL DETAILS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Personal Details}
+{\small
+\begin{tabular}{@{}ll}
+\textbf{Name:} & Kiran Jagannath Padole \\
+\textbf{Date of Birth:} & 08 October 2001 \\
+\textbf{Gender:} & Male \\
+\textbf{Nationality:} & Indian \\
+\textbf{Languages Known:} & English, Hindi, Marathi \\
+\textbf{Email:} & kiranpadole2026@gmail.com \\
+\textbf{Phone:} & +91-9850780471 \\
+\textbf{Location:} & Pune, India \\
+\end{tabular}
+}
+\end{rSection}
+
+\end{document}
