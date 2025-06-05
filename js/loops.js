@@ -48,3 +48,8 @@ let obj = {
     age: 30,
     city: "Hyderabad"
 };
+
+
+let name = "kiran";
+
+console.log(`name : $(name)`);
