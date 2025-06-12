@@ -12,7 +12,7 @@
 
 /* ******************************** */
 // Array operation
-let arr = [2, 3, 4, 6]
+// let arr = [2, 3, 4, 6]
 
 // inserting the array
 
@@ -39,38 +39,38 @@ let arr = [2, 3, 4, 6]
 // arr.slice();
 // arr.slice(starting index,no. of element to be removed, element to insert)
 
-console.log(arr);
+// console.log(arr);
 
 // remove from specific index
-arr.splice(2,1);
-console.log(arr);
+// arr.splice(2,1);
+// console.log(arr);
 
 // arr./
 
 // insert at specific index
-arr.splice(2,0,200);
-console.log(arr);
+// arr.splice(2,0,200);
+// console.log(arr);
 
 
-let a1 = [1,2,3]
-let a2 = [4,5,6]
+// let a1 = [1,2,3]
+// let a2 = [4,5,6]
 
 // find index of element
-console.log(a1.indexOf(3)); // presesnt on which index
-console.log(a1.indexOf(6)); // if not find then we get -1
+// console.log(a1.indexOf(3)); // presesnt on which index
+// console.log(a1.indexOf(6)); // if not find then we get -1
 
 // reversing an array
-a1.reverse();
-console.log(a1);
+// a1.reverse();
+// console.log(a1);
 
 // sorting an array
-a1.sort();
-console.log(a1);
+// a1.sort();
+// console.log(a1);
 
 // concatinate
 
-let a3 = a1.concat(a2);  // return array 
-console.log(a3);
+// let a3 = a1.concat(a2);  // return array 
+// console.log(a3);
 
 
 
@@ -105,11 +105,11 @@ console.log(a3);
 // Example of forEach
 // Using forEach to double each element in an array
 
-let ar = [2,4,5,6,7]
+// let ar = [2,4,5,6,7]
 
-let m = ar.forEach((element) => {
-    console.log(element*2); 
-})
+// let m = ar.forEach((element) => {
+//     console.log(element*2); 
+// })
 // Output: 4, 8, 10, 12, 14
 // Note: forEach does not return a new array, it simply executes the provided function for each element in the original array.
 // console.log(m); // Output: undefined
@@ -135,3 +135,85 @@ let m = ar.forEach((element) => {
 // });
 // console.log(mappedArray); // [4, 8, 10, 12, 14]
 // console.log(ar); // [2, 4, 5, 6, 7] - original array remains unchanged
+
+
+
+// filter
+// filter is a method that creates a new array with all elements that pass the test implemented by the provided function.
+// It is used to filter out elements from an array based on a specific condition and return a new array with the filtered values.
+// It does not modify the original array, but rather creates a new array with the filtered values.
+// It is commonly used for data filtering, such as selecting elements that meet a certain criteria.
+// Example of filter
+// Using filter to get only even numbers from an array
+
+
+// let a = [5,8,4,3,7,9];
+
+// let filterArray = a.filter((element) => {return element>5});
+
+// console.log(filterArray)
+
+
+// sum of all elements
+
+// let a = [1,2,3,4];
+
+// function sumOfAllElements(a){
+//     let sum = 0;
+//     for(element of a){
+//         sum += element;
+//     }
+//     return sum;
+//     // let sum2 = (e) => sum
+// }
+
+// console.log(sumOfAllElements(a));
+
+// let k = ()
+
+
+// find maximum element largest number in array
+
+// let a = [10,22,5,7];
+
+// function getLargestElement(a){
+//     let l = a[0];
+//     for(a of a){
+//         if(l < a){
+//             l = a;
+//         }
+//     }
+//     return l;
+// }
+
+// console.log(getLargestElement(a));
+
+
+// let a = [1,4,6,7,8];
+
+// function evenNumbers(a){
+//     let count = 0;
+//     // let k = 0;    
+//     for(num of a){
+//         if(num % 2 == 0){
+//             count++;
+//         }
+//         // (num%2==0)? count++ : k++;
+//     }
+//     return count;
+// }
+
+// console.log(evenNumbers(a));
+
+
+let a = [1,2,3];
+
+function rev(a) {
+    let revArr = [];
+    for(let i = a.length-1; i>=0;i--){
+        revArr.push(a[i]);
+    }
+    return revArr;
+}
+
+console.log(rev(a));
