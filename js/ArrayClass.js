@@ -206,14 +206,163 @@
 // console.log(evenNumbers(a));
 
 
-let a = [1,2,3];
+// let a = [1,2,3];
 
-function rev(a) {
-    let revArr = [];
-    for(let i = a.length-1; i>=0;i--){
-        revArr.push(a[i]);
-    }
-    return revArr;
+// function rev(a) {
+//     let revArr = [];
+//     for(let i = a.length-1; i>=0;i--){
+//         revArr.push(a[i]);
+//         // revArr[i] = a[i];
+//     }
+//     return revArr;
+// }
+
+// console.log(rev(a));
+
+// console.log(typeof(rev(a)));
+// console.log(typeof(a));
+
+
+// // check if array contains element
+// let a = [5,10,15];
+// let num = 10;
+
+// function containsElement(a,num) {
+//     for(element of a){
+//         if(num == element){
+//             return true;
+//         }
+//     }
+//     return false;
+
+//     // return for(element of a)(num == element)
+// }
+
+// console.log(containsElement(a,num));
+
+
+// let a = [4,5,6];
+
+// function getlength(a){
+//     let length = 0;
+//     for(n of a){
+//         length++;
+//     }
+//     return length;
+// }
+// console.log(getlength(a));
+
+
+
+
+// let a = [2,6,8,3];
+
+
+//  function getLargestElement(a){
+//      let l = [];
+//      for(a of a){
+//          if(a > 5){
+//              l.push(a);
+//          }
+//     }
+//      return l;
+//  }
+
+//  console.log(getLargestElement(a));
+
+
+
+// function doubleElement(arr){
+//     let d = [];
+//     for(a of arr){
+//         d.push(a+a);
+//     }
+//     return d;
+// }
+
+// let arr = [1,2,3];
+// console.log(doubleElement(arr));
+
+
+// for each
+// let arr = [1,2,3];
+
+// arr.forEach(0,0,arr.length);
+
+// arr.forEach((element) => {console.log(element)});
+
+// double each element by using map
+
+// let arr = [2,3,4]
+
+// function doubleByMap(arr){
+//     return arr.map((e) => {return e*2});
+// }
+
+// console.log(doubleByMap(arr));
+
+// let arr = [1,2,3,4,5,6];
+
+// function evenNum(arr){
+    // let result = []
+    // arr.filter((element) => {(element%2==0)? result.push(element): element});
+    // return arr.filter((element) => {return element%2===0});
+    // return result;
+// }
+
+// console.log(evenNum(arr));
+
+// let arr = ["kiran","chetan","gaurav","miya Bhai"];
+
+// function hiFun(arr){
+//     return arr.map((element) => (`hi ${element}`));
+// }
+
+// console.log(hiFun(arr));
+
+
+// let arr = [-2,5,3,-1,0];
+
+// function positveNumCount(arr){
+//     let count = 0;
+//     arr.forEach((e) => ((e>0)? count++:e ));
+//     // arr.forEach((e) => {})
+//     return count;
+// }
+
+// console.log(positveNumCount(arr));
+
+
+//string to upper case using map
+// let arr = ["apple","banana","cherry"];
+
+// function uppCaseArr(arr){
+//     return arr.map((element) => (element.toUpperCase()));
+// }
+
+// console.log(uppCaseArr(arr));
+
+// array greater than 50 using filter
+// let arr = [10,60,45,80,30];
+
+// function greterThan50(arr){
+//     return arr.filter((ele) => {if(ele > 50) {return ele}});
+// }
+
+// console.log(greterThan50(arr));
+
+
+// let k = ["x","y","z"];
+
+// function PrintElement(k){
+//     return k.forEach((element,index) => console.log( "Index " + index +":"+element ));
+// }
+
+// console.log(PrintElement(k));
+
+let arr = [5,10,15];
+
+function add10InEachNum(arr){
+    return arr.map((element) => (element + 10));
 }
-
-console.log(rev(a));
+console.log(add10InEachNum(arr));
