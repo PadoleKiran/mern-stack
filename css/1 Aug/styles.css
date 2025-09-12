@@ -1,0 +1,152 @@
+/* TODO: Universal reset (margin, padding) and box-sizing */
+* {
+  /* your code */
+  /* margin: 30px;
+  padding: 30px; */
+  
+  
+}
+
+/* TODO: Base page styles on body
+   - Set body font-family (sans-serif from your chosen font)
+   - Base font-size (e.g., 16px), line-height, text color, background color */
+body {
+  /* your code */
+  /* text-align: left;
+  display: inline-block; */
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: blue;
+  background-color: rgb(202, 232, 232);
+}
+
+/* TODO: Layout container (.page)
+   - Set max-width (e.g., 72ch or 800px)
+   - Center with margin, add comfortable padding */
+.page {
+  /* your code */
+}
+
+/* TODO: Header (#site-header) spacing and title (.site-title)
+   - Add vertical spacing
+   - Set heading font-family (serif from your chosen font)
+   - Adjust font-size and letter-spacing for .site-title */
+#site-header {
+  /* your code */
+}
+.site-title {
+  /* your code */
+}
+
+/* TODO: Tagline (.tagline)
+   - Slightly muted color
+   - Smaller font-size than body
+   - Top margin */
+.tagline {
+  /* your code */
+
+}
+
+/* TODO: Article basics (.article)
+   - Ensure readable line-height and paragraph spacing rhythm */
+.article {
+  /* your code */
+}
+
+/* TODO: Article title (.article-title) and byline (.byline)
+   - Serif font for titles, weight/size adjustments
+   - Muted/secondary color for byline */
+.article-title {
+  /* your code */
+}
+.byline {
+  /* your code */
+}
+
+/* TODO: Paragraphs (.para) spacing
+   - Bottom margin to separate blocks */
+.para {
+  /* your code */
+}
+
+/* TODO: Lead paragraph (.lead)
+   - Slightly larger font-size
+   - Increased line-height
+   - Maybe a softer color */
+.lead {
+  /* your code */
+}
+
+/* TODO: Section headings (.section-heading)
+   - Serif heading font
+   - Top/bottom margins to create hierarchy */
+.section-heading {
+  /* your code */
+}
+
+/* TODO: Lists (.list & .list-item)
+   - Comfortable left padding
+   - Bottom margin for items */
+.list {
+  /* your code */
+}
+.list-item {
+  /* your code */
+}
+
+/* TODO: Blockquote (.quote)
+   - Left border
+   - Italic style
+   - Padding and margin for separation
+   - Slightly larger or distinct color */
+.quote {
+  /* your code */
+}
+
+/* TODO: Inline code (.code-inline)
+   - Monospace stack
+   - Background, padding, and border-radius */
+.code-inline {
+  /* your code */
+}
+
+/* TODO: Links inside article (.text-link)
+   - Color, remove underline by default
+   - Underline on hover */
+.text-link {
+  /* your code */
+}
+.text-link:hover {
+  /* your code */
+}
+
+/* TODO: Utilities: .muted, .caps, .small, .mono
+   - .muted: lighter color
+   - .caps: transform to uppercase and letter-spacing
+   - .small: smaller font-size
+   - .mono: monospace font */
+.muted {
+  /* your code */
+}
+.caps {
+  /* your code */
+}
+.small {
+  /* your code */
+}
+.mono {
+  /* your code */
+}
+
+/* TODO: Footer (#site-footer)
+   - Top margin, subdued background, centered text, padding */
+#site-footer {
+  /* your code */
+}
+.footer-text {
+  /* your code */
+}
+.footer-link {
+  /* your code */
+}

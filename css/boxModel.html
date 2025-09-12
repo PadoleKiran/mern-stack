@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* display: block; */
+            width: 200px;
+            height: 200px;
+            background-color: rgb(127, 240, 191);
+            box-sizing: border-box; /*This will include padding and border in the width and height */
+            padding: 20px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Hey this is kp</p>
+    </div>
+</body>
+</html>
+
+
+
+<!-- box-sizing and border-box: -->
+<!-- by default, the width and height of an element is calculated based on the content only.
+but if we use box-sizing: border-box; then the width and height will include padding and border as well. -->
+
+
+
+<!-- block elements: -->
+<!-- 1. occupy full width of the parent element -->
+<!-- 2. start on a new line -->
+<!-- 3. can have width and height -->  
+<!-- 4. examples: div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, etc. -->
+
+<!-- in inline elements hight and width will not work
+in block elements hight and width will work -->
+
+<!-- display: inline;  -->
+<!-- by this the element will not occupy full width of the parent element and will not start on a new line. -->
+
+<!-- display: inline-block; -->
+<!-- by this the element will occupy only the width of the content and will not start on a new line. -->
+<!-- it will behave like an inline element but will allow width and height to be set. -->
+
+
+<!-- display 
+-------
+
+1. inline 
+    - takes width acc to content
+    - next elem in same line
+    - hight and width will not work(no effect)
+
+2. block
+    - takes full width of parent(100%)
+    - next elem in new line
+    - we can set width and height
+
+3. inline-block
+    - we can set width and height
+    - next elem in same line 
+
+4. none
+    - element will not be displayed
+    - used to hide elements -->
+
+
+<!-- margin: 10px; (all 4 sides)
+margine: 10px 20px; (top and bottom 10px, left and right 20px)
+margin: 10px 20px 30px; (top 10px, left and right 20px, bottom 30px)
+margin: 10px 20px 30px 40px; (top 10px, right 20px, bottom 30px, left 40px) 
+margine-top: 10px;
+margin-right: 20px;
+-->

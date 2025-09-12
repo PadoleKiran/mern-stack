@@ -151,3 +151,94 @@ function quickSort(arr){
 // console.log(mSort(arr));
 
 
+
+
+// function mSort(arr){
+//     if(arr.length <= 1){
+//         return arr;
+//     }
+
+//     let mid = Math.floor(arr.length/2);
+//     let left = arr.slice(0,mid);
+//     let right = arr.slice(mid);
+
+//     return mer(mSort(left),mSort(right));
+// }
+
+// function mer(left,right){
+//     let result = [];
+//     let i = 0;
+//     let j = 0;
+
+//     while(i<left.length && j<right.length){
+//         if(left[i] < right[j]){
+//             result.push(left[i]);
+//             i++;
+//         }
+//         else{
+//             result.push(right[i]);
+//             j++;
+//         }
+
+//     }
+
+//     if(i<left.length){
+//         result.push(left[i]);
+//         i++;
+//     }
+
+//     if(j<right.length){
+//         result.push(right[j]);
+//         j++;
+//     }
+//     return result;
+// }
+
+// console.log(mSort(arr));
+
+
+
+
+function mSort(arr){
+    if(arr.length <= 1){
+        return arr;
+    }
+
+    let mid = Math.floor(arr.length/2);
+    let left = arr.slice(0,mid);
+    let right = arr.slice(mid);
+
+    return mer(mSort(left), mSort(right));
+}
+
+function mer(left,right){
+
+    let result = [];
+    let i = 0;
+    let j = 0;
+
+    while(i<left.length && j < right.length){
+        if(left[i] < right[j]){
+            result.push(left[i]);
+            i++;
+        }
+        else {
+            result.push(right[j]);
+            j++;
+        }
+    }
+
+    if(i < left.length){
+        result.push(left[i]);
+        i++;
+    }
+    
+    if(j < right.length){
+        result.push(right[j]);
+        j++;
+    }
+
+    return result;
+}
+
+console.log(mSort(arr));

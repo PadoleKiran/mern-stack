@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    createElement
+    appendChild
+    removeChild
+    textContext
+    -->
+    <h1>Chetan bodybilder java developer</h1>
+    <button id="btn1">Click Me</button>
+
+    <button id="btn2">hide</button>
+
+    <script>
+        let container = document.getElementById('p');
+        let addbtn = document.getElementById('btn1');
+        let rembtn = document.getElementById('btn2');
+
+        let addedPara = [];
+
+        addbtn.addEventListener('click', () => {
+            let hs1 = document.createElement('h1');
+            hs1.textContent = "adding...";
+            document.body.appendChild(hs1);
+            addedPara.push(hs1);
+        })
+
+    </script>
+</body>
+
+</html>

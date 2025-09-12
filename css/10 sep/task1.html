@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: dodgerblue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            border-radius: 50%;
+
+            animation-name: boxkey;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes boxkey {
+            0% {
+                transform: translateX(0px);
+                background-color: orange;
+            }
+            30% {
+                transform: translatex(200px);
+                background-color: rgb(227, 237, 216);
+                transition-duration: 3s;
+            }
+
+            50% {
+                transform: translate(200px,300px);
+                /* color: brown; */
+                background-color: rgb(55, 43, 226);
+            }
+
+            70% {
+                transform: translate(100px,300px);
+                background-color: green;
+            }
+
+            100% {
+                transform: translateX(0px);
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Animate Me</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .image-container {
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+        }
+
+        .image-part {
+            height: 200px;
+            width: 200px;
+            /* transform: scale(1.2
+            /* ); */
+            transition: 2ms;
+            /* overflow: hidden; */
+        }
+
+        .image-part:hover {
+            transform: scale(1.2);
+        }
+
+        .btn {
+            background-color: chocolate;
+            height: 50px;
+            width: 100px;
+            border: none;
+            color: wheat;
+            /* font-style: bold; */
+        }
+
+        /* html collection and node list differnece  */
+        .btn:hover {
+            height: 70px;
+            width: 120px;
+            border: 2px solid black;
+        }
+
+        .card {
+            background-color: aquamarine;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            /* text-justify: auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- image hover zoom + lift -->
+    <div class="image-container">
+        <img src="https://cdn.pixabay.com/photo/2022/04/04/03/08/ng-7110292_1280.png" alt="sample image"
+            class="image-part">
+    </div>
+    <br>
+
+    <!-- 3d button press effect -->
+    <button class="btn">Click me</button>
+    <br><br>
+
+    <!-- titled cart effect -->
+    <div class="card">Tilt me</div>
+    <br><br>
+</body>
+
+</html>

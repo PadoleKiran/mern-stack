@@ -1,0 +1,118 @@
+/* TODO: Use universal selector to reset margin and padding for all elements */
+* {
+  /* your code here */
+}
+
+/* TODO: Style the body element
+   - font-family
+   - text color
+   - background color
+   - line-height */
+body {
+  /* your code here */
+  /* width: 50%;
+  margin-left: auto;
+  margin-right: auto; */
+  text-align: center;
+}
+container {
+  background-color: rgb(254, 184, 73);
+}
+
+/* TODO: Style the main header (#main-header)
+   - background color
+   - text color
+   - padding
+   - center text */
+#main-header {
+  /* your code here */
+  /* align-items: center; */
+  /* align-content: center; */
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(254, 184, 73);
+}
+
+/* TODO: Style the page title (.page-title)
+   - larger font size
+   - bold weight
+   - some letter spacing */
+.page-title {
+  /* your code here */
+}
+
+/* TODO: Style the logo image (.logo)
+   - set width
+   - add margin below */
+.logo {
+  /* your code here */
+  height: 50px;
+  width: 50px;
+  
+}
+
+/* TODO: Style the profile section (.profile)
+   - background white
+   - padding
+   - width
+   - margin auto
+   - border-radius
+   - subtle box-shadow */
+.profile {
+  /* your code here */
+}
+
+/* TODO: Style the section titles (.section-title)
+   - larger font size
+   - distinct color
+   - bottom margin */
+.section-title {
+  /* your code here */
+}
+
+/* TODO: Style the description paragraphs (.description)
+   - font size
+   - color
+   - margin-bottom */
+.description {
+  /* your code here */
+}
+
+/* TODO: Style the skills section (.skills)
+   - similar to .profile for consistency */
+.skills {
+  /* your code here */
+}
+
+/* TODO: Grouping selector for .description and .skill-item
+   - base font-size
+   - text color */
+.description,
+.skill-item {
+  /* your code here */
+}
+
+/* TODO: Style the skill list (.skill-list)
+   - remove default list style
+   - add spacing between items */
+.skill-list {
+  /* your code here */
+}
+
+/* TODO: Style the footer (#main-footer)
+   - background color
+   - text color
+   - center text
+   - padding */
+#main-footer {
+  /* your code here */
+  background-color: rgb(254, 184, 73);
+}
+
+/* TODO: Style the footer link (.footer-link)
+   - text color
+   - remove underline */
+.footer-link {
+  /* your code here */
+}

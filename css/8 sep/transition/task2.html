@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn {
+            background-color: chocolate;
+            height: 50px;
+            width: 100px;
+            border: none;
+            color: wheat;
+            transition: all 0.3s ease;
+            margin-left: 20px;
+        }
+
+        .btn:hover {
+            height: 70px;
+            width: 120px;
+            border: 2px solid black;
+            background-color: peru;
+            color: white;
+        }
+
+        .image {
+            height: 200px;
+            width: 200px;
+            margin-left: 20px;
+            overflow: hidden;
+            transition: 1s;
+        }
+
+        .image:hover {
+            transform: scale(1.2);
+        }
+
+        .card {
+            /* padding: 50% auto; */
+
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            margin-left: 20px;
+            box-shadow: 3px 3px 5px rgb(175, 175, 175);
+            overflow: hidden;
+            transition: all 1s ease;
+            /* text-align: center; */
+
+            display: flex;
+            /* enable flexbox */
+            justify-content: center;
+            /* center horizontally */
+            align-items: center;
+        }
+
+        .card:hover {
+            /* height: 150px;
+            width: 150px; */
+            box-shadow: 7px 7px 5px black;
+        }
+
+        .fade-box {}
+
+        nav {
+            /* align-content: center;
+            justify-content: center; */
+            /* text-decoration:  none; */
+            margin-left: 20px;
+            gap: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            gap: 20px;
+            /* border-bottom: black; */
+            transition: all 1s ease;
+
+        }
+
+        /* a:hover {
+            border-bottom: 2px solid black;
+        } */
+
+
+        nav a {
+            position: relative;
+            text-decoration: none;
+            color: black;
+            margin-right: 20px;
+            font-size: 18px;
+            padding: 5px 0;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: black;
+
+            transform: scaleX(0);
+            /* hidden initially */
+            transform-origin: left;
+            /* start from left */
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            /* expand underline */
+        }
+
+        .fade-box {
+            height: 100px;
+            width: 100px;
+            background-color: tomato;
+            align-content: center;
+            text-align: center;
+            margin: 20px;
+            color: aliceblue;
+            transition: all 1s ease;
+        }
+
+        .fade-box:hover{
+            background-color: rgb(237, 136, 118);
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <!-- Smooth Button Hover Effect -->
+        <button class="btn">Hover Me</button>
+        <br><br>
+
+        <!-- Image Zoom on Hover -->
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1688600793944-4d45993e6583?q=80&w=1221&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="image" alt="Sample">
+        </div>
+        <br><br>
+
+
+        <!-- Card Shadow Expansion -->
+        <div class="card">Hover Card</div>
+        <br><br>
+
+
+        <!-- Navbar Link Underline Animation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <br><br>
+
+
+        <!-- Fade In / Fade Out Effect -->
+        <div class="fade-box">Hover Me</div>
+
+    </body>
+</body>
+
+</html>

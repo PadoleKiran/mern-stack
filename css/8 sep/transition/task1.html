@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            height: 100px;
+            background-color: skyblue;
+
+            transition: background-color 2s ease, transform 5s ease;
+        }
+
+        .box:hover {
+            background-color: green;
+            /* margin-left: 200px; */
+            transform: translate(500px);
+        }
+    </style>
+</head>
+<body>
+    <button class="box">Hover me</button>
+</body>
+</html>
+
+<!-- 
+    transition property
+    transition-duration
+    transiton-timing-function
+
+    -'linear' -> constant speed from start to end
+    -'ease' -> starts slow, then fast, then ends slow (normal smooth effect default)
+    -'ease-in' -> starts slow, then fast end
+    -'ease-out' -> starts fast, then slow ends
+    -'ease-in-out' -> starts slow, then fast, then slow ends
+-->

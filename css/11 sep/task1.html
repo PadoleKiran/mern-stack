@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    createElement
+    appendChild
+    removeChild
+    textContext
+    innerHTML
+    -->
+    <h1>Welcome to my aoo</h1>
+    <button id="btn">Click Me</button>
+
+    <button id="btn2">hide</button>
+
+    <script>
+        let para = document.createElement('p');
+        // console.log(par);
+        para.textContent = "This is a paragraph";
+        // para.innerHTML = "This is <i> paragraph </i>";   // we use this when we also want use html tags in our para and with this tags will work
+
+        document.body.appendChild(para);
+        let add = null;
+
+        let btn1 = document.getElementById('btn');
+        btn1.addEventListener('click', () => {
+            add = document.createElement('h1');
+            add.textContent = "adding new data...";
+            document.body.appendChild(add);
+        });
+
+        // let btn2 = document.getElementById('btn2');
+        // btn2.addEventListener('click',() => {
+        //     if(add && document.body.contains(add)){
+        //         document.body.removeChild(add);
+
+        //     }
+        // })
+
+        let btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', () => {
+            // Get all h1 tags except the first one (main heading)
+            let h1s = Array.from(document.querySelectorAll('h1')).slice(1);
+            if (h1s.length > 0) {
+                // Remove the last added h1
+                let lastH1 = h1s[h1s.length - 1];
+                if (document.body.contains(lastH1)) {
+                    document.body.removeChild(lastH1);
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

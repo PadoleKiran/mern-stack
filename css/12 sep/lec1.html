@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('hello')"> click </button>
+    <button id="btn"></button>
+
+    <script>
+        let btn = document.getElementById("btn");
+
+        btn.onclick = function() { alert("button clicked");}
+        btn.textContent = "alert";
+
+        btn.addEventListener('click', (e) => {console.log(e.type); console.log(e.target);})
+    </script>
+</body>
+</html>

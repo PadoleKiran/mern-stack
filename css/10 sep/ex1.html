@@ -1,0 +1,160 @@
+<!-- animation: name duration timing-function delay iteration-count direction fill-mode;  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+       
+        .spinner {
+            /* background-color: blue; */
+            border-radius: 50%;
+            /* color: darkgrey; */
+            /* border: 8px solid #ddd; */
+            border: 8px solid rgb(25, 25, 246);
+            border-top: 8px solid rgb(4, 6, 4);
+            border-radius: 50%;
+            
+            height: 100px;
+            width: 100px;
+
+            /* animation: round 1s linear infinite; 
+            */
+
+            animation-name: round;
+            animation-duration: 2s;
+            animation-iteration-count:infinite;
+            animation-timing-function:linear;
+
+
+    
+        }
+
+
+        @keyframes round {
+            to {
+                transform: rotate(360deg);
+            }
+           
+        }
+
+
+        .circle {
+            background-color: brown;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 100px;
+            position: relative;
+            animation: circle-up 1s ease-in-out infinite alternate;
+
+        }
+
+        @keyframes circle-up {
+            from {
+                /* transform: translateX(0); */
+                top: 0;
+            }
+
+            to {
+                top: 250px;
+            }
+
+            
+            /* 0% {}
+            50% {}
+            100% {} */
+        }
+
+        .line-text {
+            border: 5px solid black;
+            overflow: hidden;
+            width: 300px;
+            margin-left: 100px;
+        }
+
+        .line {
+            animation: line-a 1s infinite linear    ;;
+        }
+
+        @keyframes line-a {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .bt {
+            background-color: orangered;
+            color: aliceblue;
+            height: 50px;
+            width: 100px;
+            border-radius: 10px;
+            animation: bt-animation 2s linear infinite;
+            margin: 200px;
+        }
+
+        @keyframes bt-animation {
+            from {
+                /* height: 80px;
+                width: 120px; */
+                transform: scale(1);
+            }
+            to {
+                /* height: 50px;
+                width: 100px; */
+                transform: scale(1.5);
+            }
+        }
+
+        .box-wala-code {
+            height: 100px;
+            width: 150px;
+            background-color: chartreuse;
+            margin: 100px;
+            text-align: center;
+            /* text-justify: inter-cluster; */
+            animation: box-animation 2s linear infinite;
+            
+        }
+
+        @keyframes box-animation {
+            0% {opacity: 100%;}  
+            50% {opacity: 0%;}  
+            100% {opacity: 100%;}  
+        }
+        .p-mid {
+            padding-top: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner">
+        
+        <!-- <p>A</p> -->
+    </div>
+
+
+    <div class="circle"></div>
+
+
+    <div class="line-text">
+        <p class="line"><span style='font-size:100px;'>&#128762;</span></p>
+    </div>
+
+
+    <div class="btn">
+        <button class="bt">Click Me</button>
+    </div>
+
+    <div class="box-wala-code">
+        <p class="p-mid">Hello</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="actionBtn" type="button"> click me </button>
+    <div id="output"></div>
+
+    <script>
+        let btn = document.getElementById('actionBtn');
+        let output = document.getElementById('output');
+
+        // btn.setAttribute('class', 'first');
+
+        btn.addEventListener('click',() => {
+            btn.setAttribute('class', 'first');
+            output.textContent = 'the this';
+            
+        });
+
+        btn.addEventListener('dblclick',() => {
+            btn.removeAttribute('class', 'first');
+            output.textContent = '';
+        });
+
+
+        //preventDefault method in js dom -> default deheviour kam stop karanay sathi
+        // ()=> {} call back function
+    </script>
+</body>
+</html>
