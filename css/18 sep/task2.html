@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SVG Transform, Transition, Animation</title>
+
+  
+<style>
+  /* body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    gap: 20px;
+    background: #f0f0f0;
+  }
+
+  svg {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  polygon {
+    fill: lightblue;
+    stroke: black;
+    stroke-width: 2;
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+
+  polygon:hover {
+    transform: scale(1.2) rotate(20deg);
+    fill: orange;
+  }
+
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  } */
+
+  .spin{
+    animation-name: spin;
+    animation-duration: 5s;
+  }
+
+  @keyframes spin {
+    from {}
+    to {}
+   }
+</style>
+  
+</head>
+<body>
+
+  <!-- Normal star with hover effect -->
+  <svg>
+    <polygon points="50,15 61,35 82,35 66,50 72,71 50,60 28,71 34,50 18,35 39,35" />
+  </svg>
+
+  <!-- Always spinning star -->
+  <svg>
+    <polygon class="spin" points="50,15 61,35 82,35 66,50 72,71 50,60 28,71 34,50 18,35 39,35"/>
+  </svg>
+
+</body>
+</html>

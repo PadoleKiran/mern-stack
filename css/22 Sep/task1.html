@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>DOM Practice</title>
+    <style>
+        .title {
+            font-weight: 700;
+        }
+
+        .box {
+            padding: 8px;
+            border: 1px solid #ddd;
+            margin: 6px 0;
+        }
+
+        .blue {
+            background: #e6f0ff;
+        }
+
+        .red {
+            background: #ffe6e6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .rounded {
+            border-radius: 8px;
+        }
+
+        .highlight {
+            outline: 2px dashed orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="box blue">
+        <h1 class="title">Welcome</h1>
+        <p id="info">This is a paragraph.</p>
+        <button id="action">Click me</button>
+    </div>
+
+    <div id="playground" class="box">
+        <h2>Playground</h2>
+        <ul id="list">
+            <li class="item">Alpha</li>
+            <li class="item">Beta</li>
+        </ul>
+        <div id="output"></div>
+    </div>
+
+    <!-- Your scripts go here -->
+    <script>
+        // write code per task below
+        let main = document.getElementById("main");
+        let info = document.getElementById("info");
+        let title = document.getElementsByClassName("title");
+        let tag = document.getElementsByTagName("p");
+        let item = document.querySelector(".item");
+        let allItem = document.querySelectorAll(".item");
+        let actionBtn = document.getElementById("action");
+
+        console.log(main.childNodes.length);
+        console.log(main.children.length);
+        console.log(main.firstChild);
+        console.log(main.firstElementChild);
+        console.log(main.lastChild);
+        console.log(main.lastElementChild);
+
+        // Explain in a comment why childNodes and children usually differ.
+        /*  
+        childNodes returns all child nodes including text nodes (like spaces and line breaks), 
+        while children returns only element nodes. Therefore, childNodes usually has a higher count than children.
+         */
+
+        info.textContent = "<b>Safe?</b>";
+        info.innerHTML = "<b>Safe?</b>";
+
+        /*
+     Difference:
+     - textContent: treats everything as plain text. 
+       The <b> tags are shown literally on the page. 
+     - innerHTML: parses the string as HTML, so <b> makes "Safe?" bold.
+    
+     Security Note:
+     - textContent is safer when handling user input, 
+       because it does NOT execute HTML or scripts.
+     - innerHTML can be dangerous if used with untrusted input 
+       (risk of XSS).
+    */
+
+        // tag.textContent = "Added by create Element +  appendedchild";
+
+        // let playground = document.getElementById("playground");
+        // playground.appendChild(newPara);
+
+        let newPara = document.createElement("p");
+        newPara.textContent = "Added by createElement + appendChild";
+        playground.appendChild(newPara);
+
+
+        //7 
+        // const playground = document.getElementById("playground");
+
+        // create the image
+        const hero = document.createElement("img");
+        hero.id = "hero";
+        hero.src = "https://via.placeholder.com/120x60?text=A";
+        hero.alt = "Image A";
+
+        // create the button
+        const swapBtn = document.createElement("button");
+        swapBtn.id = "swap";
+        swapBtn.textContent = "Swap Image";
+
+        // insert the image and button above #playground
+        playground.parentNode.insertBefore(hero, playground);
+        playground.parentNode.insertBefore(swapBtn, playground);
+
+        // add click event to swap image
+        swapBtn.addEventListener("click", () => {
+            if (hero.src.includes("text=A")) {
+                hero.src = "https://via.placeholder.com/120x60?text=B";
+                hero.alt = "Image B";
+            } else {
+                hero.src = "https://via.placeholder.com/120x60?text=A";
+                hero.alt = "Image A";
+            }
+        });
+
+
+        // 8 
+        main.className = "box red";
+        main.classList.add("rounded");
+
+        actionBtn.addEventListener("click", () => {
+            main.classList.toggle("highlight");
+        });
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <script>
+        fetch("https://api.quotable.io/random")
+        .then(res => {
+            if(!res.ok){
+                throw new Error(`Delete failed status: ${res.status}`);
+                        // status_div.textContent = `Delete failed status: ${res.status}`;
+            }
+            return res.json();
+        })
+        .then(res=>{
+             console.log("Post deleted ✅");
+        })
+        .then(result => {
+            console.log(result);
+        })
+    </script> -->
+
+     <div id="quoteDiv"></div>
+
+    <script>
+        let quoteDiv = document.getElementById("quoteDiv");
+
+        fetch("https://api.quotable.io/random")
+        .then((res) => {
+            if(!res.ok) {
+                throw new Error("server error");
+            }
+            return res.json();
+        })
+        .then((data) => {
+            quoteDiv.innerHTML = `<p>${data.content}</p><br>-<strong>${data.author}</strong>`;
+        })
+        .catch((err) => {
+            quoteDiv.textContent = "Could not load quote.";
+        })
+    </script>
+</body>
+</html>

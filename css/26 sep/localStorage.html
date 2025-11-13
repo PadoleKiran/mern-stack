@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 20px;
+            font-size: 20px;
+            background-color: black;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        input {
+            margin: 10px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: #0081A7;
+            height: 400px;
+            width: 500px;
+            text-align: center;
+            /* text-align: center; */
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            color: whitesmoke;
+            border: 3px solid #3c3c3c;
+            margin-left: auto;
+            margin-right: auto;;
+        }
+        input {
+            width: 300px;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        button {
+            width: 100px;
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <label for="name">Name : </label>
+    <input type="text" name="name" id="name">
+
+    <label for="email">Email : </label>
+    <input type="text" name="email" id="email">
+
+    <button id="btn">Submit</button>
+    </div>
+    <script>
+        // let name = "kiran";
+
+        // localStorage.myName = "Kiran";
+        // console.log(localStorage.myName);
+
+        // localStorage.setItem("Email", "kiran@gmail.com");
+        // console.log(localStorage.getItem("Email"));
+
+        // localStorage.clear();
+
+
+        /* 
+            localStorage Defination
+            in localStorage data store in key value pair
+            localStorage.setItem("key", "value")  => to set the data in localStorage
+            localStorage.getItem("key") => to get the data from localStorage    
+            localStorage data is permenant untill we clear it
+            localStorage.clear() => to clear the localStorage data
+            localStorage.removeItem("key") => to remove the perticular key value pair from localStorage
+        */
+
+        // let btn = document.getElementById("btn");
+
+        // btn.addEventListener("click", function(){
+        //     let name = document.getElementById("name").value;
+        //     let Email = document.getElementById("email").value;
+
+        //     localStorage.setItem("name", name);
+        //     localStorage.setItem("Email", Email);
+        //     console.log("Data Stored");
+        // });
+
+        // let name = document.querySelector("#name");
+        // let email = document.querySelector("#email");
+
+        // name.addEventListener("input", (e) => {
+        //     localStorage.setItem("name", e.target.value);
+            
+        // });
+
+        // email.addEventListener("input", (e) => {
+        //     localStorage.setItem("email", e.target.value);
+        // });
+        
+        let mydata = {
+            myname : "",
+            myemail : ""
+        }
+
+        myname.addEventListener("input", (e) => {
+            mydata.myname = e.target.value;
+            localStorage.setItem("mydata", JSON.stringify(mydata));
+        });
+
+        myemail.addEventListener("input", (e) => {
+            mydata.myemail = e.target.value;
+            localStorage.setItem("mydata", JSON.stringify(mydata));
+        });
+
+        localStorage.setItem("mydata", JSON.stringify(mydata));
+    </script>
+</body>
+</html>

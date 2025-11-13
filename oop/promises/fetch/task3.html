@@ -1,0 +1,84 @@
+<!-- https://api.github.com/users/octocat
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+   <div>
+    <input type="text" id="inp" placeholder="Enter GitHub username">
+    <div class="first"></div>
+  </div>
+
+    <script>
+    //     let username = document.getElementById("inp");
+    //     let first = document.getElementById("first");
+
+    //     // fetch(`https://api.github.com/users/octocat/${username}`)
+
+
+    //     fetch(`https://api.github.com/users/${username}`)
+    //         .then(res => {
+    //             return res.json();
+    //         })
+    //         .then((data) => {
+    //             // first.textContent(res[0]);
+
+    //             if (data.message === "Not Found") {
+    //                 first.textContent = "❌ User not found!";
+    //                 return;
+    //             }
+
+    //             first.innerHTML = `
+    //           <img src="${data.avatar_url}" width="100" height="100" style="border-radius:50%"><br>
+    //           <strong>Name:</strong> ${data.name || "N/A"}<br>
+    //           <strong>Username:</strong> ${data.login}<br>
+    //           <strong>Followers:</strong> ${data.followers}<br>
+    //           <strong>Following:</strong> ${data.following}<br>
+    //           <strong>Public Repos:</strong> ${data.public_repos}<br>
+    //         `;
+
+    //         }).catch(err => {
+    //             console.log(err);
+    //         })
+    // </script>
+
+    input.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        const username = input.value.trim();
+        if (!username) return;
+
+        fetch(`https://api.github.com/users/${username}`)
+          .then(res => res.json())
+          .then(data => {
+            if (data.message === "Not Found") {
+              first.textContent = "❌ User not found!";
+              return;
+            }
+
+            first.innerHTML = `
+              <img src="${data.avatar_url}" width="100" height="100" style="border-radius:50%"><br>
+              <strong>Name:</strong> ${data.name || "N/A"}<br>
+              <strong>Username:</strong> ${data.login}<br>
+              <strong>Followers:</strong> ${data.followers}<br>
+              <strong>Following:</strong> ${data.following}<br>
+              <strong>Public Repos:</strong> ${data.public_repos}<br>
+            `;
+          })
+          .catch(err => {
+            console.error(err);
+            first.textContent = "⚠️ Error fetching data.";
+          });
+      }
+    });
+</body>
+
+</html>

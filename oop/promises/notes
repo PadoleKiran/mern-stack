@@ -1,0 +1,26 @@
+// Applicable for json placeholder
+// GET - returns real fake data (posts, users, comments, etc.)
+// works normally 
+
+// POST - creates data
+// PUT - updates data
+// DELETE - deletes data
+
+
+// post
+// const newPost = {
+//    title: "foo",
+//    body: "bar",
+//    userId: 1
+// };
+
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//    method: "POST",
+//    headers: {
+//        "Content-type": "application/json; charset=UTF-8"
+//    },
+//    body: JSON.stringify(newPost)
+// })
+// .then(response => response.json())
+// .then(json => console.log(json))
+// .catch(err => console.log(err));

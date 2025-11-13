@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 500ppx;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button id="blue">blue</button>
+    <button id="red">red</button>
+    <button id="orange">orange</button>
+    <button id="yellow">yello</button>
+    <button id="black">black</button>
+    </div>
+
+    <script>
+        let blue = document.getElementById("blue");
+        let red = document.getElementById("red");
+        let orange = document.getElementById("orange");
+        let yellow = document.getElementById("yellow");
+        let black = document.getElementById("black");
+
+        let arr = ["blue","red","orange","yellow","black"];
+
+
+        arr.forEach((a)=>{
+            document.addEventListener("click", ()=>{
+                a.style.backgroundColor = "a";
+            })
+        })
+
+    </script>
+</body>
+</html>

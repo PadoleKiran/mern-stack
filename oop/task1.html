@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- approach - without debouncing -->
+    <!-- <input type="text" name="" id="search">
+
+    <script>
+        let search = document.getElementById("search");
+        search.addEventListener("input",()=> {
+            console.log(search.value);
+        })
+    </script> -->
+
+
+    <!-- approach 2 - with debouncing -->
+    <!-- <input type="text" name="" id="search">
+
+    <script>
+        let timer;
+        let search = document.getElementById("search");
+
+        search.addEventListener("input", () => {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                console.log(search.value);
+            },500);
+        })
+    </script> -->
+
+    <!-- approach 2 - with debouncing  -->
+    <input type="text" name="" id="search">
+
+    <script>
+        // let timer;
+        let search = document.getElementById("search");
+
+        function debounce(fun, delay){
+            let timer;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    fun(...args);
+                }, delay)
+            }
+        }
+
+        function handleSearch(val){
+            console.log(val);
+        }
+
+        let debounceSearch = debounce(handleSearch, 500);
+
+        search.addEventListener("input",(e)=>{
+            debounceSearch(e.target.value);
+        })
+    </script>
+</body>
+</html>

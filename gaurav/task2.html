@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">Main div</div>
+
+    <script>
+        let m = document.querySelector(".main");
+
+        let secondEle = document.createElement("div");
+        let thirdEle = document.createElement("p");
+        
+        thirdEle.innerHTML = "<b>coding with gorav</b>";
+        
+        m.appendChild(secondEle);
+        secondEle.appendChild(thirdEle);
+        
+    </script>
+</body>
+</html>

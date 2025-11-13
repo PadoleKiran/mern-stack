@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button type="submit" id="del">Delete</button>
+    <div id="status"></div>
+
+    <script>
+        document.getElementById("del").addEventListener("click", () => {
+            // let submit = document.getElementById("del");
+            let status_div = document.getElementById("status");
+            fetch("https://jsonplaceholder.typicode.com/posts/1", {
+                method: "PUT",
+                headers: {
+                    "Content-type": "application/json"
+                }
+            })
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Delete failed status: ${response.status}`);
+                        status_div.textContent = `Delete failed status: ${response.status}`;
+                    }
+                })
+                .then(data => {
+                    console.log("Post deleted ✅");
+                    status_div.textContent = "Post deleted ✅";
+                }
+                )
+                .catch(err => {
+                    console.log(err);
+                    status_div.textContent = err;
+                })
+        })
+    </script>
+</body>
+
+</html>

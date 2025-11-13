@@ -1,0 +1,111 @@
+<!-- Q1. Create an HTML page with a button labeled 'Show Greeting'. When clicked, it should display
+"Hello, JavaScript Learner!" inside a <p> tag using addEventListener(). -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Btn1">Show Greeting</button>
+    <p id="msg"></p>
+
+    <script>
+        const btn = document.getElementById("Btn1");
+        const msg = document.getElementById("msg");
+
+        btn.addEventListener("click", function() {
+            msg.textContent = "Hello, JavaScript Learner!";
+        });
+    </script>
+</body>
+</html>  -->
+
+
+<!-- 
+Q2. Create a list dynamically from an array ["HTML", "CSS", "JavaScript", "React"] using
+DocumentFragment. Add "Node.js" at the end using appendChild(). -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="techList"></ul>
+
+    <script>
+        const items = ["Html", "Css", "JavaScript", "React"];
+        const list = document.getElementById("techList");
+
+        const fragment = document.createDocumentFragment();
+
+        items.forEach(function(item) {
+            const li = document.createElement("li");
+            li.textContent = item;
+            fragment.appendChild(li);
+        })
+
+        list.appendChild(fragment);
+
+        const newItem = document.createElement("li");
+        newItem.textContent = "Node.js";
+        list.appendChild(newItem);
+    </script>
+</body>
+</html> -->
+
+
+<!-- Q3. Create a form (Name, Email) that saves data to localStorage on submit and displays it
+dynamically. Use submit and input events. -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Save Form Data</h2>
+
+  <form id="userform">
+    <input type="text" placeholder="Name" id="name">
+    <input type="email" placeholder="Email" id="email">
+    <button type="submit">Save</button>
+  </form>
+
+  <h4>Saved Data:</h4>
+  <p id="output"></p>
+
+  <script>
+    let form = document.getElementById("userform");
+    let nameInput = document.getElementById("name");
+    let emailInput = document.getElementById("email");
+    let output = document.getElementById("output");
+
+    form.addEventListener("input", () => {
+      output.textContent = `Name: ${nameInput.value}, Email: ${emailInput.value}`;
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      let userData = {
+        name: nameInput.value,
+        email: emailInput.value
+      };
+
+      localStorage.setItem("userData", JSON.stringify(userData));
+      output.textContent = `Saved -> Name: ${userData.name}, Email: ${userData.email}`;
+      form.reset();
+    });
+  </script>
+</body>
+</html> -->

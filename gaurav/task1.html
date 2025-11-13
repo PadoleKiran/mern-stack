@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <div class="first">
+        <h1>Task 1</h1>
+        <p>This is a sample paragraph for Task 1.</p>
+    </div>
+
+    <div class="second">
+        <h2 class="third">Task 2</h2>
+        <p>This is a sample paragraph for Task 2.</p>
+    </div>
+
+    <div>
+        <h3>Task 3</h3>
+        <p>This is a sample paragraph for Task 3.</p>
+    </div>
+    </div>
+
+    <script>
+        let first = document.getElementsByClassName("first");
+        let Qfirst = document.querySelector(".third");
+
+        console.log(Qfirst.parentElement);
+        console.log(Qfirst.childNodes);
+        
+    </script>
+</body>
+</html>
+
+
+<!-- HTMLCollection (getElementsBy*) , NodeList from querySelectorAll -->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label>Email</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <p id="error-msg" style="color: red;"></p>
+    <script>
+       let myForm = document.getElementById("myForm");
+       let email = document.getElementById("email");
+       let password = document.getElementById("password");
+       let error_msg = document.getElementById("error-msg");
+    //    let submit = document.getElementById("submit");
+
+    myForm.addEventListener("submit",(e)=>{
+        let isValid = "true";
+        error_msg.textContent = "";
+
+        if(email.value.trim() === "" || password.value.trim() === ""){
+            error_msg.textContent = "please fill all required details";
+            isValid = false;
+        }
+
+        // Step 3: Check for '@' and '.' in email (very basic check)
+        else if(!email.value.includes("@") || !email.value.includes(".")){
+            error_msg.textContent = "invalid email id";
+            isValid = false;
+        }
+
+        // Step 4: Check password length
+        else if(password.value.length < 6){
+            error_msg.textContent = "length must need greater then 6";
+            isValid = false;
+        }
+
+        if(isValid){
+            alert("form submitted succesfully");
+        }
+        else{
+            e.preventDefault();
+        }
+    })
+    </script>
+</body>
+
+</html>

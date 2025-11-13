@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<!-- <head> -->
+    <!-- <meta charset="UTF-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <title>Document</title> -->
+<!-- </head> -->
+<!-- <body> -->
+    <!-- <div id="divid"> -->
+
+    <!-- </div> -->
+
+    <!-- <script> -->
+        <!-- let div = document.getElementById("divid"); -->
+
+        <!-- fetch("https://api.quotable.io/random") -->
+        <!-- .then(res=>{ -->
+            <!-- return res.json(); -->
+        <!-- }) -->
+        <!-- .then(msg=>{ -->
+            <!-- console.log(msg); -->
+        <!-- }).catch(err => { -->
+            <!-- console.log(err); -->
+        <!-- }) -->
+    <!-- </script> -->
+<!-- </body> -->
+<!-- </html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote</title>
+</head>
+<body>
+  <h2>Random Quote Generator</h2>
+  <button id="getQuote">Get Quote</button>
+
+  <ul id="quoteList"></ul>
+
+  <script>
+    const btn = document.getElementById("getQuote");
+    const quoteList = document.getElementById("quoteList");
+
+    btn.addEventListener("click", () => {
+      fetch("https://api.quotable.io/random")
+        .then(response => response.json())
+        .then(data => {
+          // Create new list items for all data fields
+          quoteList.innerHTML = ""; // clear previous
+          for (let key in data) {
+            const li = document.createElement("li");
+            li.textContent = `${key}: ${JSON.stringify(data[key])}`;
+            quoteList.appendChild(li);
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+</body>
+</html>

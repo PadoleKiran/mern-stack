@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Traversal Example</title>
+</head>
+<body>
+  
+  <div id="first"> First Div
+    <div id="second"> Second Div
+      <div id="third">
+        Third Div
+      </div>
+    </div>
+    <div id="fourth">Fourth Div (Next Sibling)</div>
+  </div>
+
+  <script>
+    let first = document.getElementById("first");
+    let second = first.firstElementChild;
+    let third = second.firstElementChild;
+
+    console.log("First Element Child of first:", second);
+    console.log("Parent Element of second:", second.parentElement);
+
+    // Change background color of the next sibling of second
+    second.nextElementSibling.style.background = "orange";
+  </script>
+
+</body>
+</html>

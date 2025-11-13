@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API-Football Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      /*background-color: #ff6600;*/
+      background-color: #ff4b44;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #111;
+    }
+
+    .signin-btn {
+      background-color: white;
+      color: #ff4b44;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .signin-btn:hover {
+      background-color: #ffd1b3;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background-color: #ff4b44;;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+      min-height: 80vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: white;
+      transform: skewY(-5deg);
+      z-index: 1;
+    }
+
+    .hero-content {
+      z-index: 2;
+      max-width: 500px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      color: #fff;
+      margin-bottom: 25px;
+    }
+
+    .hero-content button {
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #fff;
+      color: #ff4b44;;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero-content button:hover {
+      background-color: #ffe0cc;
+    }
+
+    .hero img {
+      width: 450px;
+      z-index: 2;
+      filter: drop-shadow(0 0 25px rgba(0,0,0,0.3));
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* ===== INFO SECTION ===== */
+    .info {
+      background-color: #fff;
+      text-align: center;
+      padding: 120px 60px 80px;
+    }
+
+    .info h2 {
+      color: #0073ff;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .info h1 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    .info p {
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      font-size: 0.95rem;
+    }
+
+    /* ===== FEATURE CARDS ===== */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 30px 20px;
+      transition: 0.3s;
+      border-top: 4px solid #ff4b44;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      color: #ff4b44;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">⚽ API-FOOTBALL</div>
+    <nav>
+      <ul>
+        <li><a href="#">Coverage</a></li>
+        <li><a href="#">API Docs</a></li>
+        <li><a href="#">Widgets</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sports</a></li>
+      </ul>
+    </nav>
+    <button class="signin-btn">Sign In</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>NFL</h1>
+      <p>Leagues | Livescore | Games | Events | Teams | Standings | Statistics | Players</p>
+      <button>CHECK YOUR DOCUMENTATION</button>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/3131/3131638.png" alt="Football Player" />
+  </section>
+
+  <section class="info">
+    <h2>WELCOME TO API-SPORTS</h2>
+    <h1>We work hard every day</h1>
+    <p>In order to provide you with a quality API, we are working every day on new features. 
+       Find the complete list of features on our documentation.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>⚽ COVERAGE</h3>
+        <p>We cover 100+ leagues and cups with live scores, standings, lineups, and player stats.</p>
+      </div>
+
+      <div class="card">
+        <h3>💻 EASY INTEGRATION</h3>
+        <p>Simple and logical API structure to make your development process faster and easier.</p>
+      </div>
+
+      <div class="card">
+        <h3>💬 CHAT SUPPORT</h3>
+        <p>Our team is on hand to answer your questions directly on our support dashboard.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 API-FOOTBALL Clone | Designed by Kiran Padole ⚡
+  </footer>
+
+</body>
+</html>
