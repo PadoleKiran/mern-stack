@@ -27,25 +27,48 @@
 
 
 
-function reverses_num(n){
-    let rev = 0;
+// function reverses_num(n){
+//     let rev = 0;
 
-    while(n>0){
-        let digit = n%10;
-        rev = rev*10 + digit;
-        n = Math.floor(n/10);
-    }
+//     while(n>0){
+//         let digit = n%10;
+//         rev = rev*10 + digit;
+//         n = Math.floor(n/10);
+//     }
     
-    return rev;
+//     return rev;
+// }
+
+// let n = 123;
+// let rev = reverses_num(n);
+
+
+// if(n == rev){
+//     console.log("palindrom");
+// }
+// else{
+//     console.log("not palindrome");
+// }
+
+
+
+let arr = [[1,2,3],[4,5,6],[7,8,9]];
+let out = [];
+// console.log(arr);
+
+for(let i=0;i<arr.length;i++){
+    // console.log(arr[i]);
+    let sum = 0;
+    for(let j=0;j<arr[i].length;j++){
+        // console.log(arr[i][j]);
+        // process.stdout.write(arr[i][j] + " ");
+        sum = sum + arr[i][j];
+    }
+    // console.log();
+    out.push(sum);
+    // console.log("output!!!")
+
 }
 
-let n = 123;
-let rev = reverses_num(n);
 
-
-if(n == rev){
-    console.log("palindrom");
-}
-else{
-    console.log("not palindrome");
-}
+console.log(out);

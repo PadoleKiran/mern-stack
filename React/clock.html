@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script>
+
+    // let time = new Date();
+    let root = ReactDOM.createRoot(document.getElementById("root"));
+    // let element = React.createElement("h1",null, time.toLocaleTimeString());
+
+    setInterval(()=>{
+        let time = new Date();
+        let element = React.createElement("h1",null, time.toLocaleTimeString());
+        root.render(element);
+    },1000);
+
+    // root.render(element);
+  </script>
+</body>
+</html>
